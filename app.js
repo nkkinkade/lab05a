@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    var testSum = a + b;
-    var message = 'The sum of ' + a + ' and ' + b + ' is ' + testSum + '.';
-    return [testSum, message];
+    var theSum = a + b;
+    var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
+    return [theSum, message];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -52,6 +52,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    
     var theSum = a + b + c;
     var product = a * b * c;
     var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + theSum + '.';
@@ -78,8 +79,9 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-    // var message = testArray + ' was passed in as an array of numbers, and 9 is their sum.'
-    // var message = '2,3,4 was passed in as an array of numbers, and 9 is their sum.'
+    var sumArray = sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+    var message = testArray + ' was passed in as an array of numbers, and ' + sumArray + ' is their sum.'
+
     return [sumArray, message]
 }
 
